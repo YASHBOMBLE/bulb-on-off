@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bulb</title>
+    <style>
+        .m-container{
+            display: block;
+        }
+        .img{
+            height: 170px;
+            margin-left: 40%;
+        }
+        .container
+        {
+            margin-top: 50px;
+           
+            padding: 10px;
+            height: 100%;
+            width: auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+        .btn{
+           height: 40px;
+           width: 80px;
+           border: 0.5px;
+           font-weight: bold;
+           font-family: sans-serif;
+           border-radius: 9px;
+            position: relative;
+            top: 20pc;
+            left: -34pc;
+        }
+        .btn:hover{
+            box-shadow: 0px 0px 5px 2px #808080;
+            transition: 0.8s;
+            cursor: pointer;
+            
+        }
+        .color{
+            background-color: black;
+            
+        }
+        .light{
+            background-color: #ccc;
+            color: black;
+            height: 40px;
+           width: 80px;
+           border: 0.5px;
+           font-weight: bold;
+           font-family: sans-serif;
+           border-radius: 9px;
+            position: relative;
+            top: 20pc;
+            left: -34pc;
+        }
+        .dark{
+            background-color: #ccc;
+            color: black;
+            height: 40px;
+           width: 80px;
+           border: 0.5px;
+           font-weight: bold;
+           font-family: sans-serif;
+           border-radius: 9px;
+            position: relative;
+            top: 20pc;
+            left: -34pc;
+        }
+        .day{
+            background-color: white;
+        }
+    </style>
+    <script>
+    function on(){
+        document.getElementById("b-img").src="bulb-on.png";
+        document.getElementById('btn-on').className="light";
+        document.getElementById('btn-off').className="btn";
+        document.getElementById('change').className="day";
+        
+
+}
+function off()
+{
+document.getElementById("b-img").src="bulb-off.png";
+document.getElementById('btn-off').className="dark";
+document.getElementById('btn-on').className="btn";
+document.getElementById('change').className="color";
+}
+    </script>
+</head>
+<body class="color" id="change">
+    <div class="m-container">
+    <div align="center" class="container">
+        <img src="./bulb-off.png" class="img" id="b-img"/>
+        <br/>
+        <button class="btn" id="btn-on" onclick="on()">ON</button>
+        <button class="btn btn1" id="btn-off" onclick="off()">OF</button>
+    </div>
+    </div>
+</body>
+</html>
